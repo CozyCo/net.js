@@ -102,7 +102,7 @@ function(Promise) {
       options = optionsOrString || {};
     }
 
-    if ((options.method === METHODS.GET || options.method) && options.data) {
+    if ((options.method === METHODS.GET || !options.method) && options.data) {
       options.url = options.url + serialize(options.data);
     }
 
